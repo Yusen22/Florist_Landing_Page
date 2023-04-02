@@ -26,14 +26,14 @@ function Header() {
         <nav className={`sticky top-0 z-50 flex relative items-center justify-around mx-auto py-3 px-20 bg-white ${setScroll > 45 ? 'shadow-md' : ''}`}>
 
             {/* Logo image div */}
-            <div>
+            <div className='py-2'>
                 <img className="max-h-28" src={Logo} />
             </div>
 
             {/* Navigation div */}
             <div className="hidden mx-auto justify-evenly md:flex md:flex-col">
                 
-                <div class="flex justify-center">
+                <div class="flex justify-center mt-2">
                     <div class="mb-2 xl:w-96">
                         <div class="relative mb-4 flex w-full flex-wrap items-stretch">
                             <input
@@ -60,7 +60,7 @@ function Header() {
                     </div>
                 </div>
 
-                <div className="flex pb-3 space-x-12 uppercase">
+                <div className="flex py-3 space-x-12 uppercase text-lg">
                     <a href="#">Discover</a>
                     <a onMouseEnter={onMouse} onMouseLeave={offMouse} href="#">Shob By Type</a>
                     <a href="#">Shop By Colour</a>
