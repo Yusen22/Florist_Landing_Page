@@ -23,11 +23,11 @@ function Header() {
     return (
 
         // Navbar 
-        <nav className={`sticky top-0 z-50 flex relative items-center justify-around mx-auto py-3 px-20 ${setScroll > 45 ? 'shadow-md' : ''}`}>
+        <nav className={`sticky top-0 z-50 flex relative items-center justify-around mx-auto py-3 px-20 bg-white ${setScroll > 45 ? 'shadow-md' : ''}`}>
 
             {/* Logo image div */}
             <div>
-                <img className="max-h-20" src={Logo} />
+                <img className="max-h-28" src={Logo} />
             </div>
 
             {/* Navigation div */}
@@ -71,7 +71,7 @@ function Header() {
 
             </div>
             <div className="hidden md:flex">
-                <button className="rounded-full py-3 px-6 bg-yellow-500 hover:bg-yellow-300">Basket</button>
+                <button className="rounded-full py-3 px-10 bg-yellow-400 hover:bg-yellow-300">Basket</button>
             </div>
         </nav>
 
