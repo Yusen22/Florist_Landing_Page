@@ -23,9 +23,9 @@ function Header() {
     return (
 
         // Navbar 
-        <nav className={`sticky top-0 z-50 flex relative items-center justify-between mx-auto py-3 px-14 bg-white ${setScroll > 15 ? 'shadow-md' : ''} md:justify-around`}>
+        <nav className={`sticky top-0 z-50 flex relative items-center justify-between mx-auto py-3 px-10 bg-white ${setScroll > 15 ? 'shadow-md' : ''} md:justify-around`}>
 
-            <div className='relative w-1/5 md:hidden'>
+            <div className='relative w-1/5 lg:hidden'>
                 <div class="space-y-2">
                     <span class="block w-8 h-1 bg-gray-600"></span>
                     <span class="block w-8 h-1 bg-gray-600"></span>
@@ -39,7 +39,7 @@ function Header() {
             </div>
 
             {/* Navigation div */}
-            <div className="hidden mx-auto justify-evenly md:flex md:flex-col">
+            <div className="hidden mx-auto justify-evenly lg:flex lg:flex-col">
 
                 <div class="flex justify-center mt-2">
                     <div class="mb-2 xl:w-96">
@@ -68,7 +68,7 @@ function Header() {
                     </div>
                 </div>
 
-                <div className="flex py-3 space-x-12 uppercase text-lg">
+                <div className="flex py-3 space-x-6 uppercase text-sm xl:text-lg xl:space-x-12">
                     <a href="#">Discover</a>
                     <a onMouseEnter={onMouse} onMouseLeave={offMouse} href="#">Shob By Type</a>
                     <a href="#">Shop By Colour</a>
@@ -79,7 +79,7 @@ function Header() {
 
             </div>
             <div className="">
-                <button className="rounded-full py-3 px-10 bg-yellow-400 hover:bg-yellow-300">Basket</button>
+                <button className="hidden rounded-full py-3 px-8 bg-yellow-400 shadow hover:bg-yellow-300 sm:flex">Basket</button>
             </div>
         </nav>
 
