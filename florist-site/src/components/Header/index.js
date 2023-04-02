@@ -1,21 +1,29 @@
 import './style.css'
 import Logo from "../../images/the-potted-petal-low-resolution-logo-color-on-transparent-background.png"
-import {useState} from 'react'
+import { useState, useTransition } from 'react'
+import { SetScroll } from '../../hooks/setScroll'
 
 function Header() {
 
-    const [scroll, setScroll] = useState(false)
+    const [dropdown, setDropdown] = useState(false)
 
-    if(window.scrollY <= 95) {
-        setScroll(true)
-    } else {
-        setScroll(false)
+    const onMouse = () => {
+        setDropdown(true)
     }
+
+    const offMouse = () => {
+        setDropdown(false)
+    }
+
+    const setScroll = SetScroll()
+
+    console.log(setScroll)
+
 
     return (
 
         // Navbar 
-        <nav className="flex relative container items-center justify-around mx-auto py-3 px-20">
+        <nav className={`sticky top-0 z-50 flex relative items-center justify-around mx-auto py-3 px-20 ${setScroll > 45 ? 'shadow-md' : ''}`}>
 
             {/* Logo image div */}
             <div>
@@ -52,18 +60,18 @@ function Header() {
                     </div>
                 </div>
 
-                <div className="flex space-x-12">
+                <div className="flex pb-3 space-x-12 uppercase">
                     <a href="#">Discover</a>
-                    <a href="#">Shob By Type</a>
+                    <a onMouseEnter={onMouse} onMouseLeave={offMouse} href="#">Shob By Type</a>
                     <a href="#">Shop By Colour</a>
-                    <a href="#">Shop By Season</a>
+                    <a href="#">Shop By Occassion</a>
                     <a href="#">Careers</a>
                     <a href="#">Contact</a>
                 </div>
 
             </div>
             <div className="hidden md:flex">
-                <button class="rounded-full py-3 px-6 bg-yellow-500 hover:bg-yellow-300">Order Now</button>
+                <button className="rounded-full py-3 px-6 bg-yellow-500 hover:bg-yellow-300">Basket</button>
             </div>
         </nav>
 
