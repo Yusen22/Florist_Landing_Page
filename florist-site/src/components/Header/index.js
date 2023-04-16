@@ -17,8 +17,6 @@ function Header() {
 
     const setScroll = SetScroll()
 
-    console.log(setScroll)
-
 
     return (
 
@@ -70,7 +68,13 @@ function Header() {
 
                 <div className="flex py-3 space-x-6 uppercase text-sm xl:text-lg xl:space-x-12">
                     <a href="#">Discover</a>
-                    <a onMouseEnter={onMouse} onMouseLeave={offMouse} href="#">Shob By Type</a>
+                    <div class="dropdown dropdown-hover">
+                        <label tabindex="0" class="m-1">Shop By Type</label>
+                        <ul tabindex="0" class="dropdown-content menu p-2 mt-3 shadow bg-stone-500 rounded-5 w-52">
+                            <li><a>Item 1</a></li>
+                            <li><a>Item 2</a></li>
+                        </ul>
+                    </div>
                     <a href="#">Shop By Colour</a>
                     <a href="#">Shop By Occassion</a>
                     <a href="#">Careers</a>
